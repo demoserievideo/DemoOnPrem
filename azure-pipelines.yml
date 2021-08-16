@@ -19,5 +19,5 @@ stages:
   - stage: Build
     jobs: 
     - job: 'api_build'
-    steps:
-    - template: dotnet.yml@templates
+      steps:
+      - template: dotnet.yml@templates
