@@ -25,7 +25,10 @@ stages:
   - stage: DeployDev
     jobs:
     - deployment: 'deploy_dev'
-      environment: dev
+      environment: 
+        name: dev
+        resourceType: VirtualMachine
+        tags: demo
       strategy:
         runOnce:
           deploy:
