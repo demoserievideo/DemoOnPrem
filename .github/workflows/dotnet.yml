@@ -50,4 +50,5 @@ jobs:
     
     - run: |
        cd C:\Windows\system32\inetsrv
-       appcmd add site /name:demo /bindings:http://*:80 /physicalpath:"d:\temp"
+       ./appcmd.exe add site /name:demo /bindings:http://*:80 /physicalpath:"d:\temp"
+       
