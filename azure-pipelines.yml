@@ -24,11 +24,11 @@ steps:
   inputs:
     command: 'publish'
     publishWebProjects: true
-    arguments: '--configuration Release -o $(Pipeline.Workspace)/demo'
+    arguments: '--configuration Release -o $(Pipeline.Workspace)/releasedemo'
     zipAfterPublish: false
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Pipeline.Workspace)/demo'
+    PathtoPublish: '$(Pipeline.Workspace)/releasedemo'
     ArtifactName: 'drop'
     publishLocation: 'Container'
