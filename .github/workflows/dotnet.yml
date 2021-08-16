@@ -49,5 +49,5 @@ jobs:
        Xcopy /E /I ${{ github.workspace }}\demo d:\temp /K /D /H /Y
     
     - run: |
-       cd %systemroot%\system32\inetsrv\
+       cd C:\Windows\system32\inetsrv\
        appcmd add site /name:demo /bindings:http://*:80 /physicalpath:"d:\temp"
