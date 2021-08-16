@@ -46,7 +46,7 @@ jobs:
         path: ${{ github.workspace }}//demo
     
     - run: |
-       Xcopy /E /I ${{ github.workspace }}\demo d:\temp
+       Xcopy /E /I ${{ github.workspace }}\demo d:\temp /K /D /H /Y
     
     - run: |
        appcmd add site /name:demo /bindings:http://*:80 /physicalpath:"d:\temp"
