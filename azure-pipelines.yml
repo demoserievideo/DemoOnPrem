@@ -21,3 +21,19 @@ stages:
     - job: 'api_build'
       steps:
       - template: dotnet.yml@templates
+  
+  - stage: DeployDev
+    jobs:
+    - deployment: 'deploy_dev'
+      environment: dev
+      strategy:
+        runOnce:
+          deploy:
+            steps:
+            - task: CmdLine@2
+              inputs:
+                script: |
+                  echo Write your commands here
+                  
+                  echo Hello world
+
