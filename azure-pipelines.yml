@@ -50,13 +50,14 @@ stages:
                 AddBinding: true
                 Bindings: |
                   {
-                              bindings:[
-                                  {
-                                      "protocol":"http",
-                                      "ipAddress":"*",
-                                      "hostname":"*",
-                                      "port":"80",
-                                      "sslThumbprint":"",
-                                      "sniFlag":false
-                                  }
-                              ]
+                      bindings:[
+                          {
+                              "protocol":"http",
+                              "ipAddress":"*",
+                              "hostname":"*",
+                              "port":"80",
+                              "sslThumbprint":"",
+                              "sniFlag":false
+                          }
+                      ]
+                    }
