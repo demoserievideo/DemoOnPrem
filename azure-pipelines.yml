@@ -33,6 +33,11 @@ stages:
         runOnce:
           deploy:
             steps:
+            - task: CopyFiles@2
+              inputs:
+                SourceFolder: '$(Pipeline.Workspace)/drop'
+                Contents: '**'
+                TargetFolder: 'd:\temp'
             - task: CmdLine@2
               inputs:
                 script: |
