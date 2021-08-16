@@ -47,5 +47,3 @@ stages:
                 WebsiteName: 'DemoApp'
                 WebsitePhysicalPath: 'd:\webapp'
                 WebsitePhysicalPathAuth: 'WebsiteUserPassThrough'
-                AddBinding: true
-                Bindings: '80'
