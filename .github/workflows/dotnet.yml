@@ -47,8 +47,4 @@ jobs:
     
     - run: |
        Xcopy /E /I ${{ github.workspace }}\demo d:\temp /K /D /H /Y
-    
-    - run: |
-       cd C:\Windows\system32\inetsrv
-       ./appcmd.exe add site /name:demo /bindings:http://*:80 /physicalpath:"d:\temp"
        
