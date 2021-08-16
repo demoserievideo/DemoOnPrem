@@ -15,5 +15,7 @@ resources:
 pool:
   vmImage: ubuntu-latest
 
-steps:
-- template: dotnet.yml@templates
+stages:
+  - stage: Build
+    jobs: 
+    - template: dotnet.yml@templates
