@@ -32,3 +32,15 @@ jobs:
       with:
         name: artifact
         path: ${{ github.workspace }}//demo
+
+  deploy_dev:
+    name: Deploy Dev
+    runs-on: demo
+    environment:
+      name: dev 
+    needs: build    
+    steps:
+    - uses: actions/download-artifact@v2
+      with:
+        name: artifact
+        path: ${{ github.workspace }}//demo
