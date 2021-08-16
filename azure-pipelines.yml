@@ -35,13 +35,17 @@ stages:
             steps:
             - task: CopyFiles@2
               inputs:
-                SourceFolder: '$(Pipeline.Workspace)/drop'
+                SourceFolder: '$(Pipeline.Workspace)/drop/s'
                 Contents: '**'
-                TargetFolder: 'd:\temp'
-            - task: CmdLine@2
+                TargetFolder: 'd:\webapp'
+            
+            - task: IISWebAppManagementOnMachineGroup@0
               inputs:
-                script: |
-                  echo Write your commands here
-                  
-                  echo Hello world
-
+                EnableIIS: true
+                IISDeploymentType: 'IISWebsite'
+                ActionIISWebsite: 'CreateOrUpdateWebsite'
+                WebsiteName: 'DemoApp'
+                WebsitePhysicalPath: 'd:\webapp'
+                WebsitePhysicalPathAuth: 'WebsiteUserPassThrough'
+                AddBinding: true
+                Bindings: '80'
