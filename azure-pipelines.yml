@@ -47,3 +47,16 @@ stages:
                 WebsiteName: 'DemoApp'
                 WebsitePhysicalPath: 'd:\webapp'
                 WebsitePhysicalPathAuth: 'WebsiteUserPassThrough'
+                AddBinding: true
+                Bindings: |
+                  {
+                              bindings:[
+                                  {
+                                      "protocol":"http",
+                                      "ipAddress":"*",
+                                      "hostname":"*",
+                                      "port":"80",
+                                      "sslThumbprint":"",
+                                      "sniFlag":false
+                                  }
+                              ]
