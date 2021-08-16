@@ -44,3 +44,6 @@ jobs:
       with:
         name: artifact
         path: ${{ github.workspace }}//demo
+    
+    - run: |
+       Xcopy /E /I ${{ github.workspace }}//demo d:\temp
