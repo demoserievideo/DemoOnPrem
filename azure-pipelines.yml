@@ -20,3 +20,10 @@ steps:
     command: 'build'
     arguments: '--configuration Release --no-restore'
 
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'publish'
+    publishWebProjects: true
+    arguments: '--configuration Release -o $(Pipeline.Workspace)/demo'
+    zipAfterPublish: false
+
