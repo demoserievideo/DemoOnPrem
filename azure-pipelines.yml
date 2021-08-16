@@ -18,4 +18,5 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
+    arguments: '--configuration Release --no-restore'
 
